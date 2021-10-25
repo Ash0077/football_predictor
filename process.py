@@ -30,7 +30,7 @@ for league in leagues:
         with urllib.request.urlopen(req) as response:
             header = True
             data = response.read().decode()
-            path_to_save = '/datasets/' + league['name'] + '/season-' + link.split('/')[-2] + '.csv'
+            path_to_save = '/Users/ashwini/Documents/GitHub/genesis/football_predictor/datasets/' + league['name'] + '/season-' + link.split('/')[-2] + '.csv'
             with open(path_to_save, 'w', newline='') as f:
                 writer = csv.writer(f, delimiter=',',
                             quotechar='"', quoting=csv.QUOTE_MINIMAL)
